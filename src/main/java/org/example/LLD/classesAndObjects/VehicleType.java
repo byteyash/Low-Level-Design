@@ -1,4 +1,16 @@
 package org.example.LLD.classesAndObjects;
 
-public class VehicleType {
+public enum VehicleType {
+    CAR(SpotType.MID),
+    BIKE(SpotType.SMALL);
+
+    private SpotType spotType;
+
+    VehicleType(SpotType spotType) {
+        this.spotType = spotType;
+    }
+
+    public SpotType getSpotType() {
+        return spotType;
+    }
 }
