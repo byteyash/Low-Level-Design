@@ -7,10 +7,16 @@ public enum BookingStatus {
     COMPLETED("Completed");
 
     private final String label;
+
     BookingStatus(String label) {
         this.label = label;
     }
+
     public String getLabel() {
         return label;
+    }
+
+    public boolean isTerminal() {
+        return this == COMPLETED || this == CANCELLED;
     }
 }
