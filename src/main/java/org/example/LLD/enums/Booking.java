@@ -15,7 +15,7 @@ public class Booking {
     }
 
     public void cancel() {
-        if(status != BookingStatus.CONFIRMED  status != BookingStatus.PENDING_PAYMENT) {
+        if(status != BookingStatus.CONFIRMED  && status != BookingStatus.PENDING_PAYMENT) {
             throw new IllegalStateException("Booking can not be cancelled in : " + status);
         }
         status = BookingStatus.CANCELLED;
